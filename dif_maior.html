@@ -1,0 +1,38 @@
+<meta charset = "utf - 8">
+
+<script>
+
+function pulaLinha() {
+	document.write("<br>");
+}
+
+function mostra(frase) {
+	document.write(frase);
+	pulaLinha();
+}
+
+mostra("Números de 30 a 40 (exceção do 33 e 37)");
+
+pulaLinha();
+
+var num = 30;
+
+while(num <= 40) {
+
+	if(num == 33){
+		num = num + 1;
+	}
+
+	if(num == 37){
+		num = num + 1;
+	} else {
+
+	mostra(num);
+	num = num + 1;
+	}
+}
+
+pulaLinha();
+mostra("Fim!");
+
+</script>

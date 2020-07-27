@@ -1,0 +1,29 @@
+<meta charset = "utf - 8">
+
+<script>
+
+function pulaLinha() {
+	document.write("<br>");
+}
+
+function mostra(frase) {
+	document.write(frase);
+	pulaLinha();
+}
+
+mostra("Números entre 20 e 0 (ordem descrescente)");
+
+pulaLinha();
+
+var num = 20
+
+while(num >= 0) {
+	mostra(num);
+	num = num - 1;
+}
+
+pulaLinha();
+
+mostra("Fim!");
+
+</script>

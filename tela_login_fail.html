@@ -1,0 +1,44 @@
+
+<meta charset="UTF-8">
+
+<script>
+
+function pulaLinha() {
+	document.write("<br>");
+}
+
+function mostra(frase) {
+	document.write(frase);
+	pulaLinha();
+}
+
+    var loginCadastrado = "alura";
+    var senhaCadastrada = "alura321";
+
+    var maximoTentativas = 3;
+    var tentativaAtual = 1;
+
+    var loginInformado = prompt("Informe seu login");
+
+    while(tentativaAtual < maximoTentativas) {
+
+    	if(loginInformado == loginCadastrado) {
+    		var senhaInformada = prompt("Informe sua senha");
+    	} else {
+    		var loginInformado = prompt("Login inválido. Informe seu login novamente");
+    		tentativaAtual = tentativaAtual + 1;
+    		mostra("Tentativas excedidas. Contate o administrador!");
+    	}
+    	if(senhaInformada ==  senhaCadastrada) {
+    		alert("Bem-vindo ao sistema!");
+    		tentativaAtual = maximoTentativas;
+    		mostra("CONSEGUI FAZER ESSA FUCKING TELA DE LOGIN!!!!!");
+    	} else {
+    		var senhaInformada = prompt("Senha inválida. Informe sua senha novamente");
+    		tentativaAtual = tentativaAtual + 1;
+    		mostra("Tentativas excedidas. Contate o adminstrador");
+    	}
+    }
+
+</script>
+
