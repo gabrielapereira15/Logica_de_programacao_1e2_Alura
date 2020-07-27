@@ -1,0 +1,24 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+	var tela = document.querySelector('canvas'); // chama a tela pra dentro do java script
+	var pincel = tela.getContext ('2d'); // informa qual a dimensão do desenho
+
+	//triângulo maior, preto
+	pincel.fillStyle = 'black';
+	pincel.beginPath();
+	pincel.moveTo(50, 50); //onde a linha começa
+	pincel.lineTo(50, 400);// para onde a linha vai
+	pincel.lineTo(400, 400);
+	pincel.fill(); //chama de novo a tinta;
+
+	//triângulo menor, branco
+	pincel.fillStyle = 'white';
+	pincel.beginPath();
+	pincel.moveTo(100, 175);
+	pincel.lineTo(100,350);
+	pincel.lineTo(275,350);
+	pincel.fill();
+
+</script>

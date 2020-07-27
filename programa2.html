@@ -1,0 +1,30 @@
+<canvas width = "600" height = "400"></canvas>
+
+<script>
+
+	// criei a função para ficar mais explicativo e para criar vários quadrados sem precisar ficar repetindo
+	function desenhaQuadrado(x, y, cor) {
+
+		var tela = document.querySelector('canvas');
+		var pincel = tela.getContext('2d');
+
+		pincel.fillStyle = cor;
+		pincel.fillRect(x, y, 50, 50);
+		pincel.fillStroke = 'black'; // para criar uma borda
+		pincel.strokeRect(x, y, 50, 50); //onde vc quer a borda
+	}
+
+	var x = 0
+
+	while(x < 600) {
+
+		desenhaQuadrado(x, 0, 'green');
+
+		desenhaQuadrado(x, 50, 'red');
+
+		x = x + 50; //incrementei com +50 porque o tamanho da tela será aumentado de 50 em 50
+
+		// também dá pra fazer em for, ficaria assim: for (var = O, x < 600; x = x + 50){}
+	}
+
+</script>

@@ -1,27 +1,32 @@
-<meta charset="utf-8">
+<canvas width="600" height="400"></canvas>
 
 <script>
 
-	alert("A idade da Gabriela é 26 anos");
-	document.write("E o seu marido?");
-	document.write("<br>");
-	document.write("A idade do Eduardo é " + (20+5));
-	document.write("<br>");
-	document.write("Ambos nasceram no ano de " + (2019-26));
-	document.write("<br>");
-	document.write("A média das idades é " + (25+26)/2);
-	document.write("<br>");
-	document.write("A soma das idades é " + (25+26));
-	document.write("<br>");
+	var tela = document.querySelector('canvas'); // chama a tela pra dentro do java script
+	var pincel = tela.getContext ('2d'); // qual a dimensão do desenho
 
-</script>
+	/* 
+	pincel.fillStyle = 'lightgrey'; // faixa do meio, cinza
+	pincel.fillRect(0, 0, 600, 400);
+	*/
 
-<br>
-Exercício 8 da aula 02
-<br>
+	pincel.fillStyle = 'green'; //faixa da direita, verde
+	pincel.fillRect(0, 0, 200, 400);
 
-<script>
+	pincel.fillStyle = 'red'; //faixa da esquerda, vermelha
+	pincel.fillRect(400, 0, 200, 400);
 
-    document.write((200 + 100 + 300 + 400)/4);
+	pincel.fillStyle = 'yellow'; //triângulo do meio, amarelo;
+	pincel.beginPath();
+	pincel.moveTo(300, 200); //onde a linha começa
+	pincel.lineTo(200, 400);// para onde a linha vai
+	pincel.lineTo(400, 400);
+	pincel.fill(); //chama de novo a tinta;
 
+	pincel.fillStyle = 'blue'; //círculo do meio, azul
+	pincel.beginPath();
+	pincel.arc(300, 200, 50, 0, 2 * 3.14); //para fazer um círculo
+	pincel.fill();
+
+	// pincel.arc(X, Y, RAIO, 0, 2 * PI) - Para um círculo completo
 </script>

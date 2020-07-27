@@ -1,0 +1,37 @@
+<meta charset="utf-8">
+
+<h1> QUEST PARA O JIMMY </h1>
+
+<script>
+
+	function sorteiaNumeros() {
+		return Math.round(Math.random() * 10);
+	}
+
+	var numerosAleatorios = [];
+	var quantidadeNumeros = 5;
+
+	for(var posicao = 0; posicao < quantidadeNumeros; posicao++) {
+		numerosAleatorios.push(sorteiaNumeros());
+	}
+
+	document.write("Números aleatórios: " + numerosAleatorios + "<br><br>");
+
+	function numerosOrdenados () {
+
+		for(var i = 0; i <= numerosAleatorios.length; i++) {
+
+			if(numerosAleatorios[i] > numerosAleatorios[i + 1]) {
+
+				numerosAleatorios[i] == numerosAleatorios[i + 1];
+			} else {
+				numerosAleatorios[i] == numerosAleatorios[i];
+			}
+		}
+
+	}
+
+	document.write("Números aleatórios ordenados: ");
+	numerosOrdenados();
+	
+</script>
